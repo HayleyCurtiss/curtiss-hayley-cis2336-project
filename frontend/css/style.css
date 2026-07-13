@@ -1,5 +1,5 @@
 body {
-    background-color: #ffffff;
+    background-color: #FEF8EC;
     margin: 0;
     padding: 0;
     font-family: Georgia, serif;
@@ -7,12 +7,12 @@ body {
 }
 
 .page-content {
-    margin: 1rem;
-    padding: 2rem;
+    margin: 2rem;
+    padding: 1rem;
 }
 
 .sitewide-header {
-    background-color: #212936;    
+    background-color: #261111;    
     padding: 1rem 2rem;
     flex-direction: row;
     display: flex;
@@ -34,6 +34,8 @@ body {
     margin-left: 2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .homepage-nav a {
@@ -45,23 +47,146 @@ body {
     color: #fedf15;
 }
 
+.welcome {
+    max-width: 750px;
+    text-align: left;
+    margin-left: 0;
+    font-size: 30px;
+    margin: 0.25rem 0;
+}
+
+.welcome p {
+    margin: 0.25rem 0;
+    max-width: 750px;
+}
+
+.description {
+    max-width: 750px;
+    text-align: left;
+    margin-left: 0;
+}
+
+.artwork {
+    background-color: #834051;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 1rem 0 2rem 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artwork h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 1rem;
+}
+
 .threeset img {
     width: 250px;
     height: 250px;
     object-fit: cover;
-    border: 4px solid #fedf15;
+    border: 4px solid #3f060f;
     border-radius: 10px;
 }
 
 .images-threeset {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
+}
+
+.threeset h3 {
+    text-align: center;
+    color: #ffea60;
+}
+
+.threeset {
+    font-size: 12px;
+    text-align: center;
+}
+
+.Events h2 {
+    margin-top: 2rem;
+}
+
+.line-break {
+    width: 100%;
+    height: 8px;
+    background-color: rgb(76, 153, 71);
+    margin-top: 2rem;
 }
 
 .homepage-events img {
     width: 250px;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.homepage-events {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.event-info {
+    font-size: 17px;
+}
+
+.event-title {
+    font-size: 70px;
+    padding: 0;
+    margin: 0;
+}
+
+.event-text {
+    margin: 0;
+    padding: 0;
+}
+
+.arrow {
+    font-size: 150px;
+    font-weight: 900;
+    color: #3f060f;
+    margin: 0 1rem; 
+    user-select: none;
+}
+
+.left-arrow,
+.right-arrow,
+.images-threeset {
+    display: inline-flex;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 8rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-arrow {
+    position: absolute;
+    right: 8rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.artwork {
+    position: relative;
 }
