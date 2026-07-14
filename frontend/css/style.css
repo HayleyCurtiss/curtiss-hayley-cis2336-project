@@ -217,7 +217,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Event Grid */
 .events-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -226,7 +225,6 @@ body {
     max-width: 1400px;
 }
 
-/* Event Cards */
 .event-box {
     background-color: #253e34;
     padding: 1rem;
@@ -253,10 +251,9 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Button */
-.event-btn {
+.event-button {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
     background-color: #c056a5;
     color: #ffffff;
     border-radius: 6px;
@@ -309,7 +306,7 @@ body {
 
 .calendar-day {
     background-color: #79d083;
-    padding: 0.8rem;
+    padding: 1rem;
     text-align: center;
     font-weight: bold;
     border-radius: 6px;
@@ -317,10 +314,10 @@ body {
 
 .calendar-cell {
     background-color: #cacccb;
-    padding: 1.2rem;
+    padding: 1rem;
     text-align: center;
     border-radius: 6px;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .calendar-cell.empty {
@@ -348,4 +345,99 @@ body {
 
 .calendar-title {
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.submission-section {
+    width: 60%;
+    max-width: 600px;
+    margin: 2rem auto; 
+    background-color: rgba(88, 122, 77, 0.9); 
+    padding: 2rem;
+    border-radius: 12px;
+    color: #121c16;
+}
+
+.submission-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.submission-firstline {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.submission-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.preview-box {
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.preview-box img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.submit-button {
+    padding: 1rem 2rem;
+    background-color: #a23550;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #834051;
+}
+
+.submit-pagebg {
+     background-image: url("../images/wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.preview-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
 }
