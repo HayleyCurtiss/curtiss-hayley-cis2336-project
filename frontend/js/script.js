@@ -6,25 +6,53 @@ function showMonth(month) {
     });
 
     const target = document.getElementById('calendar-' + month);
+
     if (target) {
         target.style.display = 'block';
     }
 }
 
-document.getElementById("artFile").addEventListener("change", function () {
-    const file = this.files[0];
 
-    if (file) {
-        const reader = new FileReader();
+const artFile = document.getElementById("artFile");
 
-        reader.onload = function (e) {
-            document.getElementById("previewImage").src = e.target.result;
-        };
+if (artFile) {
+    artFile.addEventListener("change", function () {
+        const file = this.files[0];
 
-        reader.readAsDataURL(file);
-    }
-});
+        if (file) {
+            const reader = new FileReader();
 
-document.getElementById("artSubmissionForm").addEventListener("submit", (e) => {
-    e.preventDefault();
+            reader.onload = function (e) {
+                document.getElementById("previewImage").src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+}
+
+
+const artForm = document.getElementById("artSubmissionForm");
+
+if (artForm) {
+    artForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+    });
+}
+
+
+const faqButtons = document.querySelectorAll(".faq-btn");
+
+faqButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const faq = button.parentElement;
+
+        faq.classList.toggle("expanded");
+
+        if (faq.classList.contains("expanded")) {
+            button.textContent = "Hide Answer";
+        } else {
+            button.textContent = "Show Answer";
+        }
+    });
 });
