@@ -266,7 +266,6 @@ body {
     background-color: #783e6b;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     .events-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -428,7 +427,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .submit-pagebg {
-     background-image: url("../images/wallpaper.jpg");
+    background-image: url("../images/wallpaper.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -468,6 +467,15 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
+    background-color: #834051;
+    color: #ffffff;
+}
+
+.faq-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #3f060f;
 }
 
 .faq-q {
@@ -487,4 +495,12 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 .faq-q.expanded .faq-answer {
     display: block;
+}
+
+.faq-pagebg {
+    background-image: url("../images/sunflowers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
