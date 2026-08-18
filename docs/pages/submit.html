@@ -32,22 +32,22 @@
 
         <div class="form-group">
             <label for="artistName">Artist Name</label>
-            <input type="text" id="artistName" name="artist" placeholder="Your first and last name">
+            <input type="text" id="artistName" name="artist" placeholder="Your first and last name" required>
         </div>
 
         <div class="form-group">
             <label for="artistEmail">Email Address</label>
-            <input type="email" id="artistEmail" name="email" placeholder="yourname@example.com">
+            <input type="email" id="artistEmail" name="email" placeholder="yourname@example.com" required>
         </div>
 
         <div class="form-group">
             <label for="artTitle">Artwork Title</label>
-            <input type="text" id="artTitle" name="title" placeholder="Title of your awesome art!">
+            <input type="text" id="artTitle" name="title" placeholder="Title of your awesome art!" required>
         </div>
 
         <div class="form-group">
             <label for="artCategory">Category</label>
-            <select id="artCategory" name="category">
+            <select id="artCategory" name="category" required>
                 <option value="">Select a Category</option>
                 <option value="painting">Painting</option>
                 <option value="digital">Digital Art</option>
@@ -63,17 +63,17 @@
 
         <div class="form-group">
             <label for="artPrice">Price</label>
-            <input type="text" id="artPrice" name="price" placeholder="Enter a price (optional)">
+            <input type="text" id="artPrice" name="price" placeholder="Enter a price (optional)" min="0">
         </div>
 
         <div class="form-group">
             <label for="artFile">Upload Artwork</label>
-            <input type="file" id="artFile" name="artFile" accept="image/*">
+            <input type="file" id="artFile" name="artFile" accept="image/*" required>
         </div>
 
         <div class="form-group">
             <label for="artDescription">Artwork Description</label>
-            <textarea id="artDescription" name="description" rows="5" placeholder="Describe your artwork..."></textarea>
+            <textarea id="artDescription" name="description" rows="5" placeholder="Describe your artwork..." required></textarea>
         </div>
 
         <div class="preview-box">
