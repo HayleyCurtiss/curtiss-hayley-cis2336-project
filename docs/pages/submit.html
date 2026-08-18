@@ -32,22 +32,22 @@
 
         <div class="form-group">
             <label for="artistName">Artist Name</label>
-            <input type="text" id="artistName" placeholder="Your first and last name">
+            <input type="text" id="artistName" name="artist" placeholder="Your first and last name">
         </div>
 
         <div class="form-group">
             <label for="artistEmail">Email Address</label>
-            <input type="email" id="artistEmail" placeholder="yourname@example.com">
+            <input type="email" id="artistEmail" name="email" placeholder="yourname@example.com">
         </div>
 
         <div class="form-group">
             <label for="artTitle">Artwork Title</label>
-            <input type="text" id="artTitle" placeholder="Title of your awesome art!">
+            <input type="text" id="artTitle" name="title" placeholder="Title of your awesome art!">
         </div>
 
         <div class="form-group">
             <label for="artCategory">Category</label>
-            <select id="artCategory" name="artCategory">
+            <select id="artCategory" name="category">
                 <option value="">Select a Category</option>
                 <option value="painting">Painting</option>
                 <option value="digital">Digital Art</option>
@@ -62,13 +62,18 @@
         </div>
 
         <div class="form-group">
+            <label for="artPrice">Price</label>
+            <input type="text" id="artPrice" name="price" placeholder="Enter a price (optional)">
+        </div>
+
+        <div class="form-group">
             <label for="artFile">Upload Artwork</label>
-            <input type="file" id="artFile" accept="image/*">
+            <input type="file" id="artFile" name="artFile" accept="image/*">
         </div>
 
         <div class="form-group">
             <label for="artDescription">Artwork Description</label>
-            <textarea id="artDescription" rows="5" placeholder="Describe your artwork..."></textarea>
+            <textarea id="artDescription" name="description" rows="5" placeholder="Describe your artwork..."></textarea>
         </div>
 
         <div class="preview-box">
@@ -79,8 +84,41 @@
         <button type="submit" class="submit-button">Submit Artwork</button>
 
     </form>
+
+    <button id="viewSubmissionsBtn" class="submit-button2" style="margin-top:20px;">
+        VIEW MY PENDING SUBMISSIONS
+    </button>
+
+    <!-- Added confirmation message too -->
+    <div id="confirmation" style="margin-top:20px; color:white; font-size:18px;"></div>
+
 </section>
 
 <script src="../js/script.js"></script>
+
+<!-- Get route button -->
+<script>
+document.getElementById('viewSubmissionsBtn').addEventListener('click', () => {
+  window.location.href = 'http://localhost:3000/my-submissions';
+});
+</script>
+
+<!-- Post route frontend -->
+<script>
+document.getElementById('artSubmissionForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+
+  const response = await fetch('http://localhost:3000/submit-artwork', {
+    method: 'POST',
+    body: formData
+  });
+
+  const message = await response.text();
+  document.getElementById('confirmation').innerText = message;
+});
+</script>
+
 </body>
 </html>

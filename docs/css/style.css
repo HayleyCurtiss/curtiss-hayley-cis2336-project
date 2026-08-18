@@ -586,3 +586,14 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 2rem;
     padding: 1rem;
 }
+
+.submit-button2 {
+    display: block;
+    margin: 20px auto 0 auto;
+    background-color: #214321;
+    color: white;
+}
+
+.submit-button2:hover {
+    background-color: #3c9458;
+}
