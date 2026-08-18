@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
 const cors = require('cors');
 app.use(cors());
 
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use('/uploads', express.static('uploads'));
 
 /* Test */
 app.get('/', (req, res) => {
@@ -20,7 +20,7 @@ app.listen(PORT, () => {
 let submissions = [];
 
 /* POST route backend part */
-app.post('/submit-artwork', (req, res) => {
+app.post('/submit-artwork', upload.single('artFile'), (req, res) => {
   const { title, artist, category, price, description } = req.body;
 
   /* Submission info */
@@ -29,7 +29,8 @@ app.post('/submit-artwork', (req, res) => {
     artist,
     category,
     price,
-    description
+    description,
+    imagePath: req.file ? req.file.filename : null
   });
 
   /* Confirm */
@@ -54,7 +55,8 @@ app.get('/my-submissions', (req, res) => {
         Artist: ${s.artist || "(no artist)"}<br>
         Category: ${s.category || "(no category)"}<br>
         Price: ${s.price || "(no price)"}<br>
-        Description: ${s.description || "(no description)"}
+        Description: ${s.description || "(no description)"}<br>
+        ${s.imagePath ? `<img src="/uploads/${s.imagePath}" style="max-width:200px;">` : ""}
       </li><br>
     `;
   });
