@@ -8,11 +8,6 @@ app.use(cors());
 
 app.use('/uploads', express.static('uploads'));
 
-/* Test */
-app.get('/', (req, res) => {
-  res.send('Backend works yay');
-});
-
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });

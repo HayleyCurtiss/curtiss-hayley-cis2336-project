@@ -56,3 +56,14 @@ faqButtons.forEach(button => {
         }
     });
 });
+
+document.querySelectorAll('.art-card img').forEach(img => {
+  img.addEventListener('click', () => {
+    const overlay = document.createElement('div');
+    overlay.classList.add('bigView');
+    overlay.innerHTML = `<img src="${img.src}" class="bigView-img">`;
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', () => overlay.remove());
+  });
+});
