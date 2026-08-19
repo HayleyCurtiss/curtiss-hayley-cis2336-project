@@ -11,12 +11,15 @@ KEY FEATURES AND FUNCTIONALITY INCLUDED IN THIS VERSION:
 .FAQ page
 .References page
 .Art Submission page
+.backend that stores and fetches submission data
 
 .buttons added with javascript
 .functional links
 .functional art submission previews
 .functional calendar for events
 .functional youtube video embed on homepage
+.functional submissions
+.gallery page zoom image
 
 GOALS: 
 
@@ -33,3 +36,7 @@ BENEFITS FOR ARTISTS AND VISITORS:
 Artists: ArtConnect provides visibility for both beginner and professional artists, as well as a chance to connect with potential buyers. It allows them to build an online portfolio. They may also discuss techniques and critiques with fellow artists. The publicity also provides the confidence to enter their art into public events.
 
 Visitors: ArtConnect helps visitors become more familiar with diverse art styles and artists. Visitors can purchase art or just browse. They can engage with and support the local art community. 
+
+NEW: INSTRUCTIONS FOR BACKEND USE:
+
+Run "node server.js" in the backend folder (get to the backend by first entering "cd backend" in the terminal). Once it is running at localhost3000, open the website with either Live Server or View in Integrated Browser (Live Server by Ritwick Dey works better). Go to the submissions page. Upload a submission. View the submissions stored in the backend by clicking the VIEW PENDING SUBMISSIONS button. You can also view all submissions by going to http://localhost:3000/submissions in your browser, but you have to run "node server.js" first or it won't work.
